@@ -7,7 +7,7 @@ function handleOnLoad(){
 function handleOnChange(){
     const selectedId = document.getElementById("selectListBox").value;
     bookList.forEach((book)=>{
-        if(book.Id == selectedId){
+        if(book.id == selectedId){
             myBook = book;
         }
     });
@@ -84,7 +84,7 @@ function populateForm(){
     document.getElementById("bookIsbn").value = myBook.isbn;
     document.getElementById("bookLength").value = myBook.length;
     document.getElementById("bookCover").value = myBook.cover;
-    var html = "<img class = \"coverArt\" src= \"" + myBook.cover + "\"></img";
+    var html = "<img class = \"coverArt\" src= \"" + myBook.cover + "\"></img>";
     document.getElementById("picBox").innerHTML = html;
 }
 
